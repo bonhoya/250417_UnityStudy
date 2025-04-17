@@ -59,4 +59,9 @@ public class TankMove0417 : MonoBehaviour
             tankTurretPrefab.transform.Rotate(Vector3.up, -tankTurretRotate * Time.deltaTime);
         }
     }
+
+    public void DamagedTank()
+    {
+        Destroy(gameObject);
+    }
 }

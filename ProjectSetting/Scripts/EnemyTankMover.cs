@@ -5,10 +5,11 @@ using UnityEngine;
 public class EnemyTankMover : MonoBehaviour
 {
     [SerializeField] Transform enemyEyeTransform;
-    private float enemySightRange = 10f;
-    private float enemySpeed = 4f;
+    private float enemySightRange = 15f;
+    private float enemySpeed = 3f;
     private GameObject target;
 
+    public int enermyHP = 3;
     private void Update()
     {
         Patrol();
@@ -16,7 +17,22 @@ public class EnemyTankMover : MonoBehaviour
         {
             Trace();
         }
+        if(enermyHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if(collision.gameObject.tag == "Player")
+        {
+            TankMove0417 tankMove0417 = collision.gameObject.GetComponent<TankMove0417>();
+            tankMove0417.DamagedTank();
+        }
+    }
+
     private void Patrol()
     {
         if (Physics.Raycast(enemyEyeTransform.position, enemyEyeTransform.forward, out RaycastHit hitInfo, enemySightRange))
@@ -40,6 +56,11 @@ public class EnemyTankMover : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
         transform.LookAt(target.transform.position);
+    }
+
+    public void DamagedEnemy(int damage)
+    {
+        enermyHP -= damage;
     }
     
 }
