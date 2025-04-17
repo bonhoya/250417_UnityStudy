@@ -216,6 +216,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1103261024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8656466468712816066, guid: 889ed1d284dc1f84896db3f3b8f6190f, type: 3}
+  m_PrefabInstance: {fileID: 1559841903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1447927939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8656466468712816074, guid: 889ed1d284dc1f84896db3f3b8f6190f, type: 3}
@@ -233,6 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c632ed1e123206d4696ef8b95a988659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tankTurretPrefab: {fileID: 1103261024}
+  tankTurretRotate: 12.1
 --- !u!1001 &1559841903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,8 +385,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575786233}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34163645, y: 0.3683223, z: -0.14754306, w: 0.85197085}
-  m_LocalPosition: {x: -45.84221, y: 29.167011, z: -38.50511}
+  m_LocalRotation: {x: 0.2554454, y: 0.000036984682, z: 0.00013361871, w: 0.9668236}
+  m_LocalPosition: {x: -0.69597226, y: 30.763634, z: -64.32329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
