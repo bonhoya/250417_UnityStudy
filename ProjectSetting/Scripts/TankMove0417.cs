@@ -7,6 +7,7 @@ public class TankMove0417 : MonoBehaviour
     private float tankSpeed = 5;
     private float rotateSpeed = 10;
     [SerializeField] GameObject tankTurretPrefab;
+    [SerializeField] TankShooter tankShooter;
 
     [Range(30, 100)]
     [SerializeField] float tankTurretRotate;
@@ -15,6 +16,8 @@ public class TankMove0417 : MonoBehaviour
     {
         Mover();
         TankTurretMover();
+        tankShooter.Fire();
+        
     }
 
     private void Mover()
